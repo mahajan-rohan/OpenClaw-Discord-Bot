@@ -6,6 +6,5 @@ __pycache__/
 *.pyc
 
 # Local Databases & Memory
-memory_core/
 data/
 chroma_db/
