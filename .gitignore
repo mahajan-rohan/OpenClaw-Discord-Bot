@@ -1,0 +1,11 @@
+# Sensitive Information
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Databases & Memory
+memory_core/
+data/
+chroma_db/
