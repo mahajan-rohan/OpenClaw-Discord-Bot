@@ -37,7 +37,7 @@ OpenClaw is a production-grade, autonomous conversational AI built for Discord. 
 | **Brain** | Reasoning, Tool Orchestration, & Generation | Groq API (Llama-3.3-70b-versatile) |
 | **Short-Term Memory** | Search & retrieve historical Discord messages | ChromaDB + SentenceTransformers |
 | **Core Memory** | Persistent user preferences, soul, & tasks | Local Markdown File System (`.md`) |
-| **Hands (MCP)** | Interact with the outside world (GitHub, Gmail) | Model Context Protocol (`npx` + `FastMCP`) |
+| **Hands (MCP)** | Interact with the outside world (GitHub) | Model Context Protocol (`npx` + `FastMCP`) |
 | **Pulse** | Proactive background task execution | `asyncio` loops + `dateparser` |
 
 ---
@@ -98,15 +98,13 @@ OpenClaw is a production-grade, autonomous conversational AI built for Discord. 
 │  Short-term      │    │  • 1_soul.md     │    │  │   GitHub   │  │
 │  fact indexing   │    │  • user.md       │    │  │  (Node.js) │  │
 │                  │    │  • memory.md     │    │  └────────────┘  │
-│  Embeddings:     │    │  • 4_heartbeat   │    │  ┌────────────┐  │
-│  MiniLM-L6-v2    │    │                  │    │  │   Gmail    │  │
-│                  │    │                  │    │  │  (FastMCP) │  │
-└──────────────────┘    └──────────────────┘    └────────────┴─────┘
+│  Embeddings:     │    │  • 4_heartbeat   │    │                  │
+└──────────────────┘    └──────────────────┘    └──────────────────┘
           │                         │                         │
           ▼                         ▼                         ▼
 ┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐
 │   LOCAL DISK     │    │   LOCAL DISK     │    │  EXTERNAL APIs   │
-│   ./chroma_db/   │    │   Markdown I/O   │    │  GitHub, Google  │
+│   ./chroma_db/   │    │   Markdown I/O   │    │  GitHub          │
 └──────────────────┘    └──────────────────┘    └──────────────────┘
 ```
 
@@ -191,8 +189,6 @@ GROQ_API_KEY=gsk_your_groq_api_key_here
 
 # MCP Tool Credentials
 GITHUB_PERSONAL_ACCESS_TOKEN=ghp_your_github_token_here
-GMAIL_USER=your_email@gmail.com
-GMAIL_APP_PASSWORD=abcd_efgh_ijkl_mnop
 ```
 
 ### Step 4: Run
