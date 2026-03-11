@@ -51,7 +51,6 @@ OpenClaw is a production-grade, autonomous conversational AI built for Discord. 
 
 ### 🔌 MCP (Model Context Protocol)
 * **GitHub Integration:** * Search repositories, create issues, and read files organically.
-* **Gmail Integration (Custom):** * Securely send individual or bulk emails directly from Discord using Python `FastMCP`.
 
 ### 💓 Autonomy (The Heartbeat)
 * **Background Scheduler:** Runs every 60 seconds independently of user input.
@@ -85,7 +84,7 @@ OpenClaw is a production-grade, autonomous conversational AI built for Discord. 
 │  │  │   MEMORY     │  │   CONTEXT    │  │    TOOLS     │                   │   │
 │  │  │              │  │              │  │              │                   │   │
 │  │  │ 1_soul.md    │  │ Query Expand │  │ GitHub       │                   │   │
-│  │  │ user.md      │  │ + ChromaDB   │  │ Gmail        │                   │   │
+│  │  │ user.md      │  │ + ChromaDB   │  │              │                   │   │
 │  │  └──────────────┘  └──────────────┘  └──────────────┘                   │   │
 │  └─────────────────────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────────────────────┘
@@ -207,9 +206,8 @@ Initializing Agent...
 Initializing MCP Manager...
 Initializing Heartbeat...
 ✅ Logged in as OpenClawBot
-🔌 Connecting to MCP Servers (GitHub, Gmail)...
+🔌 Connecting to MCP Servers (GitHub)...
 ✅ Found Server Script: .../index.js
-✅ Gmail Server Configured
 🛠️  MCP Tools Active: 28 tools loaded.
 💓 Starting Autonomy Loop...
 --------------------------------------------------
@@ -267,7 +265,6 @@ openclaw-discord-bot/
 │       ├── manager.py          # Client connection handling
 │       ├── server_config.py    # Subprocess definitions for MCP servers
 │       ├── client.py           # Standard stdio MCP Client wrapper
-│       └── gmail_server.py     # Custom FastMCP Python server
 ├── .env                        # Environment variables
 └── requirements.txt            # Python dependencies
 ```

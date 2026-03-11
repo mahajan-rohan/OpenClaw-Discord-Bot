@@ -5,5 +5,5 @@
 * i love coding in java
 * i love blue color
 * i love my work
-i love my work here in IITKGP
-i have a passion of photography
+* i love my work here in IITKGP
+* i have a passion of photography
